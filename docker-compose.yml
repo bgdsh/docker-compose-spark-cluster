@@ -73,3 +73,8 @@ services:
   initdaemon:
     image: bde2020/mu-init-daemon-service:0.1.0
     container_name: pipeline-daemon
+
+networks:
+  default:
+    external:
+      name: big-data
