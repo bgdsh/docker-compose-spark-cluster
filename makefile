@@ -1,4 +1,5 @@
 up:
+	docker-compose pull
 	docker-compose up -d
 copy-hive-conf:
 	docker cp ./hive-site.xml spark-master:/spark/conf
