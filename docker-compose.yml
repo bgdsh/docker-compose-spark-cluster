@@ -13,7 +13,7 @@ services:
       - INIT_DAEMON_STEP=setup_spark
       - "constraint:node==<yourmasternode>"
   spark-worker-1:
-    image: bde2020/spark-worker:2.4.5-hadoop2.7
+    image: goodbai/spark-worker:2.4.5-hadoop2.7
     container_name: spark-worker-1
     depends_on:
       - spark-master
@@ -25,7 +25,7 @@ services:
       - SPARK_WORKER_MEMORY=8g
       - "constraint:node==<yourworkernode>"
   spark-worker-2:
-    image: bde2020/spark-worker:2.4.5-hadoop2.7
+    image: goodbai/spark-worker:2.4.5-hadoop2.7
     container_name: spark-worker-2
     depends_on:
       - spark-master
